@@ -120,6 +120,8 @@ The mean stays kind of the same we started with 49.93 , 49.13, 48.42, and now is
 
 `r sd(my1000$k3)`
 
+We expect and we get `r sd(my1000$k3)`
+
 ```{r}
 numb = 16
 Hdata = Homers_data[sample(1:1000,size=numb*1000, replace=T),"kkardashtemp"]
