@@ -108,7 +108,7 @@ p <- ggplot(my1000, aes(x=k5),col=sex) +
 # Add mean line
  geom_vline(aes(xintercept=mean(k5)),
             color="blue", linetype="dashed", size=1)
-p + ggtitle("n = 5") +
+p + ggtitle("n = 9") +
   xlab("temperature") + ylab(" density")
 
 print(paste('mean = ', mean(my1000$k5),' sd = ',sd(my1000$k5)))
