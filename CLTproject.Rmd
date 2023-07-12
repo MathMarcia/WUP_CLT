@@ -147,6 +147,14 @@ print(paste('mean = ', mean(my1000$k4),' sd = ',sd(my1000$k4)))
 
 The SD for this exercise is a 1/4 of the original. number given is 10.62. The number continues to be lower as we move along in CLT. 
 
+The mean is 49.58 and it stays around 50. It does not change much. 
+
+
+
+
+
+
+
 
 
 
