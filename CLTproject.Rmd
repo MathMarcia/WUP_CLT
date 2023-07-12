@@ -150,6 +150,7 @@ The SD for this exercise is a 1/4 of the original. number given is 10.62. The nu
 The mean is 49.58 and it stays around 50. It does not change much. 
 
 
+
 ```{r}
 numb = 25
 Hdata = Homers_data[sample(1:1000,size=numb*1000, replace=T),"kkardashtemp"]
@@ -168,11 +169,37 @@ p + ggtitle("n = 25") +
   xlab("temperature") + ylab(" density")
 
 print(paste('mean = ', mean(my1000$k5),' sd = ',sd(my1000$k5)))
+```
+
+The standard deviation is 7.92 and it continues to decrease because it is being divided by 1/5 of the original. 
+
+The mean is 49.72 and it stays about the same in 50 range. 
 
 
 
+```{r}
+numb = 36
+Hdata = Homers_data[sample(1:1000,size=numb*1000, replace=T),"kkardashtemp"]
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+my1000$k6 = x.avg
 
 
+p <- ggplot(my1000, aes(x=k6),col=sex) + 
+  geom_density() +
 
+# Add mean line
+ geom_vline(aes(xintercept=mean(k6)),
+            color="blue", linetype="dashed", size=1)
+p + ggtitle("n = 36") +
+  xlab("temperature") + ylab(" density")
 
+print(paste('mean = ', mean(my1000$k6),' sd = ',sd(my1000$k6)))
 
+```
+
+The SD in this exercise is 6.89 and it continues to shrink as we go higher. This time is divided by 1/6 and the number lowers from the original. 
+
+The means has stayed almost the same all along with 49.76. The mean does not change as the deviation does in the CLT
+
+```{r}
